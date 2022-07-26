@@ -86,6 +86,7 @@ function refreshUI(datepicker, mode = 3, quickRender = true) {
   }
   if (mode & 1 && inputField) {
     inputField.value = stringifyDates(datepicker.dates, config);
+    inputField.dispatchEvent(new Event('input'));
   }
 }
 
